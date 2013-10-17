@@ -154,8 +154,6 @@ void timer_reset(uint32_t timer_peripheral)
 		rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM8RST);
 		break;
 #endif
-/* These timers are not supported in libopencm3 yet */
-/*
 	case TIM9:
 		rcc_peripheral_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM9RST);
 		rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM9RST);
@@ -185,7 +183,6 @@ void timer_reset(uint32_t timer_peripheral)
 		rcc_peripheral_clear_reset(&RCC_APB1RSTR,
 					   RCC_APB1RSTR_TIM14RST);
 		break;
-*/
 	}
 }
 
@@ -2179,7 +2176,7 @@ void timer_slave_set_mode(uint32_t timer_peripheral, uint8_t mode)
 void timer_slave_set_trigger(uint32_t timer_peripheral, uint8_t trigger)
 {
 	TIM_SMCR(timer_peripheral) &= ~TIM_SMCR_TS_MASK;
-	TIM_SMCR(timer_peripheral) |= trigger;
+    TIM_SMCR(timer_peripheral) |= trigger;
 }
 
 /* TODO Timer DMA burst */
