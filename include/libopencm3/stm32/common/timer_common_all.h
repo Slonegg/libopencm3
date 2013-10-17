@@ -54,6 +54,12 @@ specific memorymap.h header before including this header file.*/
 #define TIM6				TIM6_BASE
 #define TIM7				TIM7_BASE
 #define TIM8				TIM8_BASE
+#define TIM9				TIM9_BASE
+#define TIM10				TIM10_BASE
+#define TIM11				TIM11_BASE
+#define TIM12				TIM12_BASE
+#define TIM13				TIM13_BASE
+#define TIM14				TIM14_BASE
 /**@}*/
 
 /* --- Timer registers ----------------------------------------------------- */
