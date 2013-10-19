@@ -154,36 +154,43 @@ void timer_reset(uint32_t timer_peripheral)
 		rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM8RST);
 		break;
 #endif
+#if defined(RCC_APB2RSTR_TIM9RST)
 	case TIM9:
-		rcc_peripheral_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM9RST);
+        rcc_peripheral_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM9RST);
 		rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM9RST);
 		break;
+#endif
+#if defined(RCC_APB2RSTR_TIM10RST)
 	case TIM10:
 		rcc_peripheral_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM10RST);
-		rcc_peripheral_clear_reset(&RCC_APB2RSTR,
-					   RCC_APB2RSTR_TIM10RST);
+        rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM10RST);
 		break;
+#endif
+#if defined(RCC_APB2RSTR_TIM11RST)
 	case TIM11:
 		rcc_peripheral_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM11RST);
-		rcc_peripheral_clear_reset(&RCC_APB2RSTR,
-					   RCC_APB2RSTR_TIM11RST);
+        rcc_peripheral_clear_reset(&RCC_APB2RSTR, RCC_APB2RSTR_TIM11RST);
 		break;
+#endif
+#if defined(RCC_APB1RSTR_TIM12RST)
 	case TIM12:
 		rcc_peripheral_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM12RST);
-		rcc_peripheral_clear_reset(&RCC_APB1RSTR,
-					   RCC_APB1RSTR_TIM12RST);
+        rcc_peripheral_clear_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM12RST);
 		break;
+#endif
+#if defined(RCC_APB1RSTR_TIM13RST)
 	case TIM13:
 		rcc_peripheral_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM13RST);
-		rcc_peripheral_clear_reset(&RCC_APB1RSTR,
-					   RCC_APB1RSTR_TIM13RST);
+        rcc_peripheral_clear_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM13RST);
 		break;
+#endif
+#if defined(RCC_APB1RSTR_TIM14RST)
 	case TIM14:
 		rcc_peripheral_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM14RST);
-		rcc_peripheral_clear_reset(&RCC_APB1RSTR,
-					   RCC_APB1RSTR_TIM14RST);
-		break;
-	}
+        rcc_peripheral_clear_reset(&RCC_APB1RSTR, RCC_APB1RSTR_TIM14RST);
+        break;
+#endif
+    }
 }
 
 /*---------------------------------------------------------------------------*/
